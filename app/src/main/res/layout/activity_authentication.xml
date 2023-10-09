@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="108dp"
+        android:text="Login"
+        android:textColor="#7A51C5"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="156dp"
+        android:ems="10"
+        android:hint="Enter Your Login"
+        android:inputType="text"
+        android:minWidth="48dp"
+
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="20dp"
+        android:text="Password"
+        android:textColor="#7A51C5"
+        android:textSize="24sp"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:hint="Enter Your Password"
+        android:inputType="text"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/signin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="384dp"
+        android:onClick="lancer"
+        android:text="Sign In"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="149dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="504dp"
+        android:onClick="lancer2"
+        android:text="Update Date and Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="72dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="516dp"
+        android:text="TextView"
+        android:textColor="#7A51C5"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
