@@ -1,46 +1,59 @@
 package eniso.ia2.tp1tasnim
-import android.os.Build
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
-import com.google.android.material.textfield.TextInputEditText
-import java.time.LocalDateTime
+import eniso.ia2.tp1tasnim.ComputeActivity
+import eniso.ia2.tp1tasnim.R
+import java.text.SimpleDateFormat
 import java.util.Date
 
 class AuthenticationActivity : AppCompatActivity() {
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_authentication)
-        var D:TextView=findViewById(R.id.dateText)
-        D.text= LocalDateTime.now().toString()
 
-    }
+        val date = findViewById<TextView>(R.id.datetext)
+        val date_btn =findViewById<Button>(R.id.datebtn)
+        val formatdate = SimpleDateFormat ("dd MMMM yyyy \n HH:mm:ss z")
+        val DateAndTime : String = formatdate.format(Date())
+        date.text= DateAndTime
 
-    fun lancer(view: View){
-        var L: EditText = findViewById<EditText>(R.id.login)
-        var P: EditText = findViewById<EditText>(R.id.password)
+        date_btn.setOnClickListener {
+            val formatdate = SimpleDateFormat ("dd MMMM yyyy \n HH:mm:ss z")
+            val DateAndTime1 : String = formatdate.format(Date())
+            date.text= DateAndTime1
 
-        if ( P.text.toString().equals("pwd"+L.text.toString())){
-            Toast.makeText(this,"Successfully logged in", Toast.LENGTH_LONG).show()
         }
-        else{
-            Toast.makeText(this,"error ocurred", Toast.LENGTH_LONG).show()
+        val signin = findViewById<Button>(R.id.signbtn)
+        val login : EditText = findViewById(R.id.login)
+        val pwd : EditText = findViewById(R.id.password)
+
+        signin.setOnClickListener {
+            if(("pw"+login.text.toString()).equals(pwd.text.toString())){
+                Toast.makeText(applicationContext, " Logged in successfully !", Toast.LENGTH_LONG).show();
+                val monIntent : Intent =  Intent(this, ComputeActivity::class.java)
+                startActivity(monIntent)
+            }
+            else{
+                Toast.makeText(applicationContext, " Please enter your correct password", Toast.LENGTH_LONG).show();
+
+            }
+
         }
 
-    }
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun lancer2(view:View){
-        var D:TextView=findViewById(R.id.dateText)
-        D.text= LocalDateTime.now().toString()
+
+
+
+
+
+
+
+
 
     }
-
-
 }

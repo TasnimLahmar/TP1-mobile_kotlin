@@ -1,6 +1,21 @@
 <resources>
-    <string name="app_name">TP1Tasnim</string>
-    <string name="mytext">Welcome To My First Android Application</string>
-    <string name="text">Hello world!</string>
+    <string name="text">Hello World!</string>
+
+    <string name="app_name">App By Tasnim</string>
+    <string name="mytext">Welcome to my first Android application</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="SignInBtn">Sign In</string>
+    <string name="dateBtn">Update Date and Time</string>
+
+
+    <string name="type">What type of calculation do you want to perform?</string>
+    <string name="sum">Sum</string>
+    <string name="square">Square</string>
+    <string name="value1">Value 1</string>
+    <string name="value2">Value 2</string>
+    <string name="calculate">Calculate</string>
+    <string name="Result">Result</string>
+
 
 </resources>
